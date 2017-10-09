@@ -1,0 +1,29 @@
+
+## Routine Name: l1Norm(vector<double> &vector1)
+
+
+Author: Colby
+
+Language: C++
+
+Description/Purpose: This routine will compute the 1 norm for a vector of a given size in the form of a double.
+
+Input: The only required input is a vector. The routine will determine the size and do the needed calculations.
+
+Output: This routine will output a single double precision number denoting the vector norm.
+
+Implementation/Code: The following is the code for l1Norm(vecotr<int>);
+
+double l1Norm(vector<int> &vector1) {
+    int sum = 0;
+    for (int i = 0; i < vector1.size(); i++) {
+        sum+= abs(vector1[i]);
+    }
+    return sum;
+}
+
+Code: This is a very simple implementation that uses the vector class to easily manipulate the data as if it were in a vector. The magnitude of the elements in the array are simply added together.
+
+Last Modification Data: 10/08/17
+
+Author: Colby Wight
