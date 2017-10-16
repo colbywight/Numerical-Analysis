@@ -28,6 +28,8 @@
     }
     return *max_element(colSumVect.begin(), colSumVect.end());
     }
+  
+**Code:** This code first puts the sum of each column of the matrix into an array and then determines the largest element.
  
 
 **Last Modified:** October/2017
