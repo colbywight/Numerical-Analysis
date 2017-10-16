@@ -26,7 +26,7 @@ Output from the lines above:
 
 This is the desired result.
 
-**Implementation/Code:** The following is the code for lInfinityNorm()
+**Implementation/Code:** The following is the code for lInfinityNorm(). Note that in order to use the max_element method, the algorithm header must be included.
 
     double lInfNorm(vector<int> &vector1) {
     return *max_element(vector1.begin(), vector1.end());
