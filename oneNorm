@@ -27,7 +27,7 @@
         colSumVect.push_back(colSum);
     }
     return *max_element(colSumVect.begin(), colSumVect.end());
-}
+    }
  
 
 **Last Modified:** October/2017
