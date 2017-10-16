@@ -17,7 +17,7 @@
 
 **Implementation/Code:** The following is the code for oneNorm:
 
-   double oneNorm(vector< vector<double> > matrix, int rows, int cols) {
+    double oneNorm(vector< vector<double> > matrix, int rows, int cols) {
     vector<double> colSumVect{};
     for (int i = 0; i < cols; i++) {
         int colSum = 0;
