@@ -33,7 +33,7 @@ The reulting vector is of size 3 with the correct entries.
 
 **Implementation/Code:** Since we are doing matrix vector multiplication and not matrix matrix multiplication, we only need two for loops to copmlete this routine.
 
-vector<double> matVectMult(vector<vector<double>> matA, int rowA, int colA, vector<double> vectB, int colB) {
+    vector<double> matVectMult(vector<vector<double>> matA, int rowA, int colA, vector<double> vectB, int colB) {
     vector<double> resultVect(rowA);
     for (int i = 0; i < rowA; i++)
     {
