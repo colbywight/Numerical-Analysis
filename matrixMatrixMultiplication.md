@@ -32,7 +32,7 @@ Output from the lines above:
 
 The reulting vector is of size 3 by 3 with the correct entries.
 
-**Implementation/Code:** 
+**Implementation/Code:** The code is as follows:
      vector<vector<double>> matMatMult(vector<vector<double>> matA, int rowA, int colA, vector<vector<double>> matB, int rowB,      int colB) {
      vector<vector<double>> resultMat(rowA, vector<double>(colB));
      for (int i = 0; i < rowA; i++)
