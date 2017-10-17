@@ -19,7 +19,7 @@
 
 **Implementation/Code:** The following is the code for scalarMult():
 
-  vector<vector<double>> scalarMult(double scalar, vector<vector<double>> matrix, int row, int col) {
+    vector<vector<double>> scalarMult(double scalar, vector<vector<double>> matrix, int row, int col) {
     vector<vector<double>> matrixMult;
     for(int i = 0; i < row; i++) {
         for(int j = 0; j < col; j++){
@@ -27,7 +27,7 @@
         }
     }
     return matrixMult;
-}
+    }
 
 
 
