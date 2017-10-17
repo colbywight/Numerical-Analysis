@@ -1,6 +1,6 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
 
-**Routine Name:**           double oneNorm(vector< vector<double> > matrix, int rows, int cols)
+**Routine Name:**          l1Error(vector<int> &vector1, vector<int> &vector2)
 
 **Author:** Colby Wight
 
