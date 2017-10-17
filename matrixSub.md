@@ -17,7 +17,7 @@
 
 **Implementation/Code:** The following is the code for matrixSub():
 
-vector<vector<double>> matrixSub(vector<vector<double>> matrix1, vector<vector<double>> matrix2, int row, int col) {
+    vector<vector<double>> matrixSub(vector<vector<double>> matrix1, vector<vector<double>> matrix2, int row, int col) {
     vector<vector<double>> subMatrix;
     for(int i = 0; i < row; i++) {
         for(int j = 0; j < col; j++) {
@@ -25,7 +25,7 @@ vector<vector<double>> matrixSub(vector<vector<double>> matrix1, vector<vector<d
         }
     }
     return subMatrix;
-}
+    }
 
 
   
