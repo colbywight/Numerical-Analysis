@@ -54,6 +54,6 @@ The number and string done are output only after the matrix matrix operations ha
     return resultMat;
     }
     
-    **Time Testing** The following code was tested with and without using parallization. The results of multipliction of square matrices of size 500, 1000, and 1500 were tested and times recorded. The smaller matrices had less of a gap between time difference with 2.67 seconds versus 4.46 seconds being the diffence. When matricies were much larger the paralliztion had a larger effect. the 1500 by 1500 matrix multiplicaiton took 4 minuets and 27 seconds withoug paralleization and only 1 minuet and 39 seconds to complete with the computer being used. 
+**Time Testing** The following code was tested with and without using parallization. The results of multipliction of square matrices of size 500, 1000, and 1500 were tested and times recorded. The smaller matrices had less of a gap between time difference with 2.67 seconds versus 4.46 seconds being the diffence. When matricies were much larger the paralliztion had a larger effect. the 1500 by 1500 matrix multiplicaiton took 4 minuets and 27 seconds withoug paralleization and only 1 minuet and 39 seconds to complete with the computer being used. 
 
 **Last Modified:** October/2017
