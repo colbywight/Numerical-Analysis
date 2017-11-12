@@ -16,9 +16,9 @@
 **Usage/Example:**
 
 This routine uses a vector for its ease of use as in passing it as a paramter of a function. In this example the vecor passed to this function was a vector containing three elements 1, 2, and 3.
-
-      cout << "l1 Norm: " << l1Norm(vector1) << endl;
-      
+```C++
+cout << "l1 Norm: " << l1Norm(vector1) << endl;
+```
 
 Output from the lines above:
 
@@ -27,7 +27,7 @@ Output from the lines above:
 This is the desired result.
 
 **Implementation/Code:** The following is the code for l1Norm()
-
+```C++
     double l1Norm(vector<int> &vector1) {
       int sum = 0;
       for (int i = 0; i < vector1.size(); i++) {
@@ -35,5 +35,5 @@ This is the desired result.
       }
       return sum;
     }
-
+```
 **Last Modified:** October/2017
