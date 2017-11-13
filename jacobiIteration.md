@@ -17,20 +17,35 @@
 
 This routine was first tested simply for verifiaction purposes on a 2x2 matrix. Then a symetric positive definite matrix creator routine was implemented to test this routine on matricies of much larger size. The matrix was tested on a 1,000x1,000 matrix.
 
-    cout << "Matrix Matrix product: \n";
-    vector<vector<double>> resultMat(3, vector<double>(3));
-    resultMat = matMatMult(matrixA, 3, 2, matrixB, 2, 3);
-    printMatrix(resultMat, 3, 3);
-      
+```C++
+    Matrix A(2, vector<double>(2));
+    A[0][0] = 500;
+    A[0][1] = 1;
+    A[1][0] = 1;
+    A[1][1] = 500;
+    vector<double> b = {1002, 1002};
+    vector<double> x0 = {1, 2};
+    cout << "Run Jacobi Iteration test" << endl;
+    vector<double> x1 = jacobiIter(A, b, x0, .01, 100);
+    cout << "Print test solutions:" << endl;
+    cout << x1[0] << " " << x1[1] << endl;
+    
+    Matrix B = makeSPD(1000);
+    vector<double> b1 = makeVect(1000);
+    vector<double> x01 = makeVect(1000);
+    cout << "Run Jacobi on n = 1000" << endl;
+    vector<double> x11 = jacobiIter(B, b1, x01, .01, 100);
+```
 
 Output from the lines above:
 
-      Matrix Matrix product: 
-      8 8 8 
-      8 8 8 
-      8 8 8
-
-The reulting vector is of size 3 by 3 with the correct entries.
+```C++
+    Run Jacobi Iteration test
+    Print test solutions:
+    2 2
+    Run Jacobi on n = 1000
+    Complete
+```
 
 **Implementation/Code:** The code is as follows:
 ```C++
