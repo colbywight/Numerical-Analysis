@@ -57,7 +57,7 @@ Output from the lines above:
         s0 = matVectMult(A, n, n, p0);
         alphaK = delta0 / dotProd(p0, s0);
         x1 = vectorAdd(x0, scalarVect(alphaK, p0));
-        r1 = vectorSub( r0, scalarVect(alphaK, s0));// r0
+        r1 = vectorSub( r0, scalarVect(alphaK, s0));
         delta1 = dotProd(r1, r1);
         p1 = vectorAdd(r1, scalarVect((delta1/delta0), p0));
         cnt++;
