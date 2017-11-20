@@ -71,5 +71,31 @@ lambdaVector powerMethod(Matrix A, Vect v0, double tol, int maxIter){
     return result;
 
 }
+Vect matVectMult(Matrix matA, int rowA, int colA, Vect vectB) {
+
+    Vect resultVect(rowA);
+    for (int i = 0; i < rowA; i++) {
+        resultVect[i] = 0;
+        for (int j = 0; j < colA; j++) {
+            resultVect[i] = resultVect[i] + matA[i][j] * vectB[j];
+        }
+    }
+    return resultVect;
+}
+
+double l2Norm(Vect vector1) {
+    int sum = 0;
+    for (int i = 0; i < vector1.size(); i++) {
+        sum+= abs(pow(vector1[i], 2))
+        }
+    return sqrt(sum);
+}
+
+Vect scalarVect(double a, Vect b) {
+    for (int i = 0; i < b.size(); i++){
+        b[i] = a * b[i];
+    }
+    return b;
+}
 ```
 **Last Modified:** October/2017
