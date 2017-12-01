@@ -1,6 +1,6 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
 
-**Routine Name:**  polyInter
+**Routine Name:**  divDif
 
 **Author:** Colby Wight
 
@@ -12,9 +12,7 @@
 
 **Output:** This routine will return the coefficients of the polynmoial in the form of a vector. 
 
-**Usage/Example:**
-
-This routine was first tested simply for verifiaction purposes on a 2x2 matrix. Then a symetric positive definite matrix creator routine was implemented to test this routine on matricies of much larger size. The matrix was tested on a 1,000x1,000 matrix.
+**Usage/Example:** This routine was first tested on a 3 point data set, then another data point was added and the program was run again. It is interesting to note that when the point was added the fourth coefficient did contain a larger error than thought.
 
 ```C++
     int main() {
