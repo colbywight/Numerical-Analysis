@@ -1,81 +1,55 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
 
-**Routine Name:**  polyInter
+**Routine Name:**  polyEval
 
 **Author:** Colby Wight
 
 **Language:** C++
 
-**Description/Purpose:**  The purpose of this code is to compute the divided difference table and return the coefficients of the Newton form. This can also be used for evaluation of the polynomial of a vector of points ino in the data set.
+**Description/Purpose:**  The purpose of this code is to use the computed divided difference table to evaluate a polynomial at a vector of points not in the data set. 
 
-**Input:** We are only given a data set. This set is requried to be in the form of a vector array. One for the x values and one for the y values at the appropriate indecies of the array.
+**Input:** We are given a data set, and the point we want to evaluate at. This set is requried to be in the form of a vector array. One for the x values and one for the y values at the appropriate indecies of the array.
 
-**Output:** This routine will return 
+**Output:** This routine will return the evaluation of the point given in the form of a double.
 
-**Usage/Example:**
-
-This routine was first tested simply for verifiaction purposes on a 2x2 matrix. Then a symetric positive definite matrix creator routine was implemented to test this routine on matricies of much larger size. The matrix was tested on a 1,000x1,000 matrix.
+**Usage/Example:**  This routine will take the given two vectors as the data set. We wanted to find the value at 5, and the program output 1 which is correct. 
 
 ```C++
-    cout << "Run Gauss-Seidel Iteration test" << endl;
-    vector<double> x2 = gausIter(A, b, x0, .01, 100);
-    cout << "Print test solutions:" << endl;
-    cout << x2[0] << " " << x2[1] << endl;
-
-    cout << "Run Gauss-Seidel on n = 1000" << endl;
-    vector<double> x12 = jacobiIter(B, b1, x01, .01, 100);
-    cout << "Complete" << endl;
+   int main() {
+    Vect x = { 1, 2, 4 };
+    Vect y = { 1, 3, 3};
+    Vect c = divDif(x, y);
+    cout << "The resulting coefficients are: " << endl;
+    printVect(c);
+    cout << "The evaluation at the given value is:  " << endl;
+    cout << polyEval(x, y, 5) << endl;
+    return 0;
+}
 ```
 
 Output from the lines above:
 
 ```C++
-     Run Gauss-Seidel Iteration test
-     Print test solutions:
-     2.008 1.99998
-     Run Gauss-Seidel on n = 1000
-     Complete
+   The resulting coefficients are: 
+   1 2 -0.666667 
+   The evaluation at the given value is:  
+   1
 ```
 
 **Implementation/Code:** The code is as follows:
 ```C++
-    vector<double> gausIter(Matrix A, vector<double> b, vector<double> x0, double tol, int maxIter) {
-    int n = (int)A.size();
-    double error = tol*10;
-    int cnt = 0;
-    vector<double> x1(n, 0);
-
-    while (error > tol && cnt < maxIter) {
-        #pragma omp parallel for
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i; j++ ){
-                x1[i] = b[i] - A[i][j] * x0[j];
-            }
+    double polyEval(Vect x, Vect y, double x0) {
+    Vect c= divDif(x, y);
+    double sum = 0;
+    int n = x.size();
+    for (int i = 0; i < n; i++) {
+        double temp = c[i];
+        for ( int j = 0; j < i; j++) {
+            temp *= x0 - x[j];
         }
-        #pragma omp parallel for
-        for (int i = 0; i < n; i++) {
-            x1[i] = x1[i] / A[i][i];
-        }
-        double sum = 0.0;
-        double diff;
-        #pragma parallel for
-        for (int i = n - 1; i >= 0; i--){
-            for (int j = i; j < n; j++) {
-                sum = sum + A[i][j] * x1[j];
-            }
-            x1[i] = sum / A[i][i];
-        }
-        for (int i = 0; i < n; i++) {
-            diff = abs(x1[i] - x0[i]);
-            sum = sum + diff*diff;
-        }
-        error = pow(sum, .5);
-        for (int i = 0; i < n; i++) {
-            x0[i] = x1[i];
-        }
-        cnt++;
+        sum += temp;
     }
-    return x0;
+    return sum;
 }
 ```
 **Last Modified:** November/2017
