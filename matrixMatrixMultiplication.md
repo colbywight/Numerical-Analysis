@@ -16,24 +16,24 @@
 **Usage/Example:**
 
 Here we have a 3 by 2 vector with entries of 2, and a 2 by 3 matrix with entries of 2 being multiplied together. The result is then output to console as follows.
-
+```C++
     cout << "Matrix Matrix product: \n";
     vector<vector<double>> resultMat(3, vector<double>(3));
     resultMat = matMatMult(matrixA, 3, 2, matrixB, 2, 3);
     printMatrix(resultMat, 3, 3);
-      
+ ```     
 
 Output from the lines above:
-
+```C++
       Matrix Matrix product: 
       8 8 8 
       8 8 8 
       8 8 8
-
+```
 The reulting vector is of size 3 by 3 with the correct entries.
 
 **Implementation/Code:** The code is as follows:
-
+```C++
     vector<vector<double>> matMatMult(vector<vector<double>> matA, int rowA, int colA, vector<vector<double>> matB, int rowB,     int colB) {
     vector<vector<double>> resultMat(rowA, vector<double>(colB));
     for (int i = 0; i < rowA; i++)
@@ -47,5 +47,5 @@ The reulting vector is of size 3 by 3 with the correct entries.
     }
     return resultMat;
     }
-
+```
 **Last Modified:** October/2017
