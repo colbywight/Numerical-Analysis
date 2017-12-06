@@ -16,23 +16,23 @@
 **Usage/Example:**
 
 Here we have a 3 by 2 vector with entries of 2, and a vector with entries of 2 being multiplied together. The result is then output to console as follows.
-
+```C++
     vector<double> result = matVectMult(matrixA, 3, 2, vectB, 2);
     cout << " Matrix Vector product: \n";
     for ( int i = 0; i < result.size(); i++) {
        cout << result[i] << " ";
     }
-      
+ ```     
 
 Output from the lines above:
-
+```C++
       Matrix Vector product: 
       8 8 8
-
+```
 The reulting vector is of size 3 with the correct entries.
 
 **Implementation/Code:** Since we are doing matrix vector multiplication and not matrix matrix multiplication, we only need two for loops to complete this routine.
-
+```C++
     vector<double> matVectMult(vector<vector<double>> matA, int rowA, int colA, vector<double> vectB, int colB) {
     vector<double> resultVect(rowA);
     for (int i = 0; i < rowA; i++)
@@ -46,5 +46,5 @@ The reulting vector is of size 3 with the correct entries.
     }
     return resultVect;
     }
-
+```
 **Last Modified:** October/2017
