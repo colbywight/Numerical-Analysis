@@ -15,11 +15,11 @@
 
 
 **Implementation/Code:** The following is the code for lInfinityerror:
-
+```C++
  double lInfinityError(vector<int> &vector1, vector<int> &vector2) {
     return abs(*max_element(vector1.begin(), vector1.end()) - *max_element(vector2.begin(), vector2.end()));
 }
-
+```
 **Code:** This code, similar to calculating the vector norm, takes the error in the norms to determine total error.
 
  
