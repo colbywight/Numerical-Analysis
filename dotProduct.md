@@ -16,20 +16,20 @@
 **Usage/Example:**
 
 Here we have two vectos of size two with enteirs 2 and their dot product.
-
+```C++
     cout << "Dot product: \n";
     double resultDotProd = dotProd(vectB, vectB);
     cout << resultDotProd << endl;
-      
+```      
 
 Output from the lines above:
-
+```C++
     Dot product: 
     8
-
+```
 
 **Implementation/Code:** The code is as follows:
-
+```C++
     double dotProd(vector<double> vect1, vector<double> vect2) {
     double result = 0;
     if (vect1.size() != vect2.size())
@@ -41,5 +41,5 @@ Output from the lines above:
     }
     return result;
     }  
-
+```
 **Last Modified:** October/2017
