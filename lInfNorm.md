@@ -16,20 +16,21 @@
 **Usage/Example:**
 
 This routine uses a vector for the vector class' ease of use in passing it as a paramter of a function. In this example the vecor passed to this function was a vector containing three elements 1, 2, and 3.
-
+```C++
       cout << "lInfinity Norm: " << l2Norm(vector1) << endl;
-      
+```      
 
 Output from the lines above:
-
+```C++
       lInfinity Norm: 3
-
+```
 This is the desired result.
 
 **Implementation/Code:** The following is the code for lInfinityNorm(). Note that in order to use the max_element method, the algorithm header must be included.
-
+```C++
     double lInfNorm(vector<int> &vector1) {
     return *max_element(vector1.begin(), vector1.end());
     } 
+```    
 
 **Last Modified:** October/2017
