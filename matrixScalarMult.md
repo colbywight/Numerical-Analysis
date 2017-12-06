@@ -18,7 +18,7 @@
 
 
 **Implementation/Code:** The following is the code for scalarMult():
-
+```C++
     vector<vector<double>> scalarMult(double scalar, vector<vector<double>> matrix, int row, int col) {
     vector<vector<double>> matrixMult;
     for(int i = 0; i < row; i++) {
@@ -28,7 +28,7 @@
     }
     return matrixMult;
     }
-
+```
 
 
   
