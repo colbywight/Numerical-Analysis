@@ -16,23 +16,23 @@
 **Usage/Example:**  Here we simply enable the clock run time print option and use it to tell us when the matrix matrix multiplication is complete on the given matricies. In this example we multiplied two matrices of dimension 1500 by 1500.
 
 
-
+```C++
      cout << "Matrix Matrix product: \n";
      vector<vector<double>> resultMat(1500, vector<double>(1500));
      resultMat = matMatMultMP(matrixA, 1500, 1500, matrixB, 1500, 1500);
      cout << "done" << endl;
-      
+```      
 
 Output from the lines above:
-
+```C++
       Matrix Matrix product: 
       382.703
       done
-
+```
 The number and string done are output only after the matrix matrix operations have been completed. The number is related to the clock speed of the computer and are then computed to seconds.
 
 **Implementation/Code:** The key difference in this code is the #pragma statment that is put before the for loops. This will allow openMP to paralellize the operations required for multiplication. Note that <omp.h> must be inclued for this capablity to be accessible.
-
+```C++
      vector<vector<double>> matMatMultMP(vector<vector<double>> matA, int rowA, int colA, vector<vector<double>> matB, int rowB, int colB) {
     double startTime = clock();
     vector<vector<double>> resultMat(rowA, vector<double>(colB));
@@ -53,7 +53,7 @@ The number and string done are output only after the matrix matrix operations ha
     
     return resultMat;
     }
-    
+```    
 **Time Testing** The following code was tested with and without using parallization. The results of multipliction of square matrices of size 500, 1000, and 1500 were tested and times recorded. The smaller matrices had less of a gap between time difference with 2.67 seconds versus 4.46 seconds being the diffence. When matricies were much larger the paralliztion had a larger effect. the 1500 by 1500 matrix multiplicaiton took 4 minuets and 27 seconds withoug paralleization and only 1 minuet and 39 seconds to complete with the computer being used. 
 
 **Last Modified:** October/2017
