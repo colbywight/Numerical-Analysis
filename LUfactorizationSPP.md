@@ -15,7 +15,7 @@
 
 
 **Implementation/Code:** The key part of this code is in its calculating the scale S sub i and then scaling the apropriate entries to help elimnate error.
- 
+```C++ 
     LU luFactor(Matrix matrix, int row, int col) {
     Matrix M(row, vector<double>(col));
     //Matrix uMatrix(row, vector<double>(col, 0));
@@ -45,6 +45,6 @@
         gaussStep(m,k);
     }
 }
-
+```
 
 **Last Modified:** October/2017 
