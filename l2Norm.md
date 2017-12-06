@@ -16,19 +16,19 @@
 **Usage/Example:**
 
 This routine uses a type vector for the vector class' ease of use. In c++ vectors are easy to manipulate such as passing them as parameters of a function. In this example parmeter to this function was a vector containing three elements 1, 2, and 3.
-       
+  ```C++
       vecotr<int> vector1 = {1, 2, 3}; 
       cout << "l2 Norm: " << l2Norm(vector1) << endl;
-      
+  ```
 
 Output from the lines above:
-
+```C++
       l2 Norm: 3.74166
-
+```
 This is the desired result.
 
 **Implementation/Code:** The following is the code for l1Norm(). This code will first take the sum of the squares of each entry of the vector and then return the square root of that value.
-
+```C++
     double l2Norm(vector<int> &vector1) {
     int sum = 0;
     for (int i = 0; i < vector1.size(); i++) {
@@ -36,5 +36,6 @@ This is the desired result.
     }
     return sqrt(sum);
 }
+```
 
 **Last Modified:** October/2017
