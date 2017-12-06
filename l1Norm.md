@@ -21,9 +21,9 @@ cout << "l1 Norm: " << l1Norm(vector1) << endl;
 ```
 
 Output from the lines above:
-
+```C++
       l1 Norm: 6
-
+```
 This is the desired result.
 
 **Implementation/Code:** The following is the code for l1Norm()
