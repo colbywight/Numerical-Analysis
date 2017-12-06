@@ -16,7 +16,7 @@
 
 
 **Implementation/Code:** The following is the code for oneNorm:
-
+```C++
     double oneNorm(vector< vector<double> > matrix, int rows, int cols) {
     vector<double> colSumVect{};
     for (int i = 0; i < cols; i++) {
@@ -28,6 +28,7 @@
     }
     return *max_element(colSumVect.begin(), colSumVect.end());
     }
+    ```
   
 **Code:** This code first puts the sum of each column of the matrix into an array and then determines the largest element.
  
