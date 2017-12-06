@@ -16,7 +16,7 @@
 
 
 **Implementation/Code:** The following is the code for infinityNorm:
-   
+   ```C++
      double infityNorm(vector< vector<double> > matrix, int rows, int cols){
      vector<double> rowSumVect{};
      for (int i = 0; i < rows; i++) {
@@ -28,7 +28,7 @@
      }
      return *max_element(rowSumVect.begin(), rowSumVect.end());
      }
-     
+ ```    
 **Code:** This code first puts the sum of each row of the matrix into an array and then determines the largest element.
  
 
