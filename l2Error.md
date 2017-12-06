@@ -16,15 +16,15 @@
 
 
 **Implementation/Code:** The following is the code for l2error:
-
- double l2Error(vector<int> &vector1, vector<int> &vector2) {
+```C++
+    double l2Error(vector<int> &vector1, vector<int> &vector2) {
     int sum = 0;
     for (int i = 0; i < vector1.size(); i++) {
         sum+= abs(pow(vector1[i], 2)-pow(vector2[i],2));
     }
     return sqrt(sum);
-}
-  
+     }
+ ``` 
 **Code:** This code, similar to calculating the vector norm, takes the error in the norms to determine total error.
 
  
