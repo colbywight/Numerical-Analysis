@@ -16,7 +16,7 @@
 
 
 **Implementation/Code:** The following is the code for matrixAdd():
-
+```C++
     vector<vector<double>> matrixAdd(vector<vector<double>> matrix1, vector<vector<double>> matrix2, int row, int col) {
     vector<vector<double>> sumMatrix;
     for(int i = 0; i < row; i++) {
@@ -26,7 +26,7 @@
      }
      return sumMatrix;
      }
-
+```
   
 **Code:** This code uses two loops to add each element of each array one at a time and then puts the sum into the output array.
 
