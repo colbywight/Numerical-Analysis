@@ -74,7 +74,7 @@ lambdaVector inversePowerMethod(Matrix A, Vect v0, double tol, int maxIter){
         lambdaOld = lambdaNew;
     }
     cout << 1/lambdaNew;
-    result.Lambda = lambdaNew;
+    result.Lambda = 1/lambdaNew;
     result.x = x;
     return result;
 
