@@ -12,7 +12,7 @@
 
 **Output:** This routine will return a struct which holds both the eigenvalue and the eigenvector.  These are both associated with the greateds eigen value.  
 
-**Usage/Example:**
+**Usage/Example:** // upload inverse method code
 
 This routine was first tested simply for verifiaction purposes on a 3x3 matrix. The matrix was tested on a 1,000x1,000 matrix.
 
