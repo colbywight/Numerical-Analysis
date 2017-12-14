@@ -15,18 +15,21 @@
 7. [Secant Bisection Hybrid](./SecantBisectionHybrid.md) 
 
 ###  Linear Algebra Background
+#### Vectors
 1. [l-1 Norm](./l1Norm.md)
 2. [l-2 Norm](./l2Norm.md) 
 3. [l-Infinity Norm](./lInfNorm.md)
-4. [1 Norm](./oneNorm.md)
-5. [Infinity Norm](./infinityNorm.md)
-6. [l-1 Error](./l1Error.md)
-7. [l-2 Error](./l2Error.md)
-8. [l-Infinity Error](./lInfinityError.md) 
-9. [Matrix Addition](./matrixAdd.md)
-10. [Matrix Subtraction](./matrixSub.md)
-11. [Scalar-Matrix Multiplication](./matrixScalarMult.md)
-12. [Vector Dot Product](./dotprod.md) 
+4. [l-1 Error](./l1Error.md)
+5. [l-2 Error](./l2Error.md)
+6. [l-Infinity Error](./lInfinityError.md)
+7. [Vector Dot Product](./dotprod.md)
+#### Matrices
+
+8.  [1 Norm](./oneNorm.md)
+9. [Infinity Norm](./infinityNorm.md)
+10. [Matrix Addition](./matrixAdd.md)
+11. [Matrix Subtraction](./matrixSub.md)
+12.  [Scalar-Matrix Multiplication](./matrixScalarMult.md)
 13. [Matrix-Vector Multiplication](./matrixVectorMultipication.md)
 14. [Matrix-Matrix Multiplication](./matrixMatrixMultiplication.md)
 15. [OMP Matrix-Vector Multiplication](./openMPMatrixVectorMultiplication.md) 
