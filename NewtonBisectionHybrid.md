@@ -66,6 +66,11 @@ int main() {
 }
 ```
 
+**Ouput**
+```C++
+     2
+ ```
+
 
 **Implementation/Code:**
 
@@ -80,8 +85,8 @@ int main() {
         int cnt = 0;
         double x1 = 0;
 
-        // do four iterations of bisect and one of then one of newtons method
-        // to see if the error become smaller.
+        // do four iterations of bisect and then one of newtons method
+        // to see if the error becomes smaller.
         while (error > newError  && cnt < maxIter) {
             //for (int i = 0; i < 4; i++){
             vect = bisectMod(a, b, "1");
