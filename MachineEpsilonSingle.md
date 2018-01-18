@@ -6,39 +6,35 @@
 
 **Language:** C++
 
-**Description/Purpose:**  This is a method that computes the single precision machine epsilon.  This method uses a loop to determine when precision is lost in a floating point number.
+**Description/Purpose:**  This routine computes the single precision machine epsilon.  This method uses a loop to determine when precision is lost in a floating point number.
 
-**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of any floating point number.
+**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of the systems floating point precision. 
 
 **Output:** This method outputs a single number that indicates the number of decimal digits that are represented in a floating point number on the computer being used. 
-**Usage/Example:**
-Sample Output: 8; on the computer used this program returned the number 8.
-   
+
+**Usage/Example:** The routine was run on a macbook air and the results are as follows. 
+```C++
+    cout << "Single Precision Machine Epsilon: ";
+    cout << smaceps() << endl;
+
+```
+
+Sample Output:
 
 ```C++
-      8
+      Single Precision Machine Epsilon: 5.96046e-08
 ```
-This simple program uses two floats to determine when accuracy is lost. The counter variable keeps track of how many times the float is accurate and up to how many bits. Each number is cast to a float to ensure that no numbers become double precision.
+This simple program uses two floats to determine when accuracy is lost. 
 
 
 **Implementation/Code:** The code is as follows:
 ```C++
-    int smaceps()
-    {
-    float n  = 1.0;
-    float x;
-    float y;
-    int counter = 0;
-
-    for (int i = 0; i < 8; i++)
-    {
-        n *= 2.0;
-        x = static_cast<float>(1.0) - static_cast<float>(1.0) / static_cast<float>(n);
-
-        y = static_cast<float>(1.0) - static_cast<float>(x);
-        counter++;
+    float smacepsTwoPointO(){
+    float x = 2;
+    while (x != 0){
+        x/=2;
     }
-    return counter;
+    return x;
     }
 ```
 **Last Modified:** December/2017
