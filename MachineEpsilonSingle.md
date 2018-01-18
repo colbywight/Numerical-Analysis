@@ -12,7 +12,8 @@
 
 **Output:** This method outputs a single number that indicates the number of decimal digits that are represented in a floating point number on the computer being used. 
 
-**Usage/Example:** The routine was run on a macbook air and the results are as follows. 
+**Usage/Example:** The routine was run on a macbook air and the results are as follows. This simple program uses two floats to determine when accuracy is lost. 
+
 ```C++
     cout << "Single Precision Machine Epsilon: ";
     cout << smaceps() << endl;
@@ -24,8 +25,7 @@ Sample Output:
 ```C++
       Single Precision Machine Epsilon: 5.96046e-08
 ```
-This simple program uses two floats to determine when accuracy is lost. 
-
+The result is as expected, our precision is up to about 8 decimal places for a float. 
 
 **Implementation/Code:** The code is as follows:
 ```C++
