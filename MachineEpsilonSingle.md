@@ -8,7 +8,7 @@
 
 **Description/Purpose:**  This routine computes the single precision machine epsilon.  This method uses a loop to determine when precision is lost in a floating point number.
 
-**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of the systems floating point precision. 
+**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of the systems floating point. 
 
 **Output:** This method outputs a single number that indicates the number of decimal digits that are represented in a floating point number on the computer being used. 
 
@@ -29,12 +29,13 @@ The result is as expected, our precision is up to about 8 decimal places for a f
 
 **Implementation/Code:** The code is as follows:
 ```C++
-    float smacepsTwoPointO(){
-    float x = 2;
-    while (x != 0){
-        x/=2;
+    float smaceps(){
+    float x = 1;
+    float x0 = 1;
+    while (x + x0 != 1){
+        x0/=2;
     }
-    return x;
+    return x0;
     }
 ```
-**Last Modified:** December/2017
+**Last Modified:** January/2018
