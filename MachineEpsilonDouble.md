@@ -1,4 +1,4 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
+# Software Manual Entry
 
 **Routine Name:**  dmaceps
 
@@ -6,42 +6,36 @@
 
 **Language:** C++
 
-**Description/Purpose:**  This is a method that computes the double precision machine epsilon.  This method uses a loop to determine when precision is lost in a double precision number.
+**Description/Purpose:**  This routine computes the double precision machine epsilon.  This method uses a loop to determine when precision is lost in a double precision number.
 
+**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of the systems double type. 
 
-**Input:** This method has no parameters.  It simply calculates the number of digits of accuracy of any double precision number.
+**Output:** This method will output the number at which accuracy is lost.  
 
-**Output:** This method outputs a single number that indicates the number of decimal digits that are represented in a double type on the computer being used. 
- 
-**Usage/Example:**
-Sample Output: 16
-   
+**Usage/Example:** The routine was run on a macbook air and the results are as follows. This simple program uses two doubles to determine when accuracy is lost. 
 
 ```C++
-      16
+    cout << "Double Precision Machine Epsilon: ";
+    cout << dmaceps() << endl;
+
 ```
-This simple program uses two double values to determine when accuracy is lost. The counter variable keeps track of how many times the double is accurate and up to how many bits. 
 
+Sample Output:
 
+```C++
+      Double Precision Machine Epsilon: 1.11022e-16
+```
+The result is as expected, our precision is up to about 16 decimal places for a float. 
 
 **Implementation/Code:** The code is as follows:
 ```C++
-   int dmaceps()
-   {
-    double n  = 1.0;
-    double x;
-    double y;
-    int counter = 0;
-
-    for (int i = 0; i < 16; i++)
-    {
-        n *= 2.0;
-        x = 1.0 - 1.0 / n;
-
-        y = 1.0 - x;
-        counter++;
+    double dmaceps(){
+    double x = 1;
+    double x0 = 1;
+    while (x + x0 != 1){
+        x0/=2;
     }
-    return counter;
+    return x0;
     }
 ```
-**Last Modified:** December/2017
+**Last Modified:** January/2018
