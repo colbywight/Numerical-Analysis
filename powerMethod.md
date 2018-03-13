@@ -32,6 +32,8 @@ This routine was tested using the hilbert matrix. The code for hilbert matrix co
      Vect v0H = {1, 2, 3, 4, 5};
      cout << "Power Method Result for 5x5 Hilbert Matrix: ";
      powerMethod(H, v0H, .001, 300); cout << endl;
+     
+     return 0;
      }
 
 ```
