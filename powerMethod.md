@@ -1,6 +1,6 @@
 # Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
 
-**Routine Name:**  jacobiIter
+**Routine Name:**  powerMethod
 
 **Author:** Colby Wight
 
