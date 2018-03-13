@@ -98,4 +98,4 @@ Vect scalarVect(double a, Vect b) {
     return b;
 }
 ```
-**Last Modified:** October/2017
+**Last Modified:** March/2018
