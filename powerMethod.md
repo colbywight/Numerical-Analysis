@@ -14,29 +14,32 @@
 
 **Usage/Example:**
 
-This routine was first tested simply for verifiaction purposes on a 3x3 matrix. The matrix was tested on a 1,000x1,000 matrix.
+This routine was tested using the hilbert matrix. The code for hilbert matrix construction are proveded as well as an example using the power method on a 5x5 hilber matrix to find the largest eigen value. The results are displayed below.
 
 ```C++
-     Matrix a( (3), vector<double>(3));
-    a[0][0]=-2;
-    a[0][1]=-4;
-    a[0][2]=2;
-    a[1][0]=-2;
-    a[1][1]=1;
-    a[1][2]=2;
-    a[2][0]=4;
-    a[2][1]=2;
-    a[2][2]=5;
-    Vect v = {1, 2, 3};
-    lambdaVector result = powerMethod(a, v, .01, 100);
+    Matrix hilbertMatrix(int n){
+    Matrix A(n, Vect(n));
+    for (int i = 0; i < n; i++){
+        for ( int j = 0; j < n; j++) {
+            A[i][j] = 1.00 / ( (i+1) + (j+1) -1 );
+        }
+     }
+     return A;
+     }
 
-    cout << result.Lambda;
+     int main() {
+     Matrix H = hilbertMatrix(5);
+     Vect v0H = {1, 2, 3, 4, 5};
+     cout << "Power Method Result for 5x5 Hilbert Matrix: ";
+     powerMethod(H, v0H, .001, 300); cout << endl;
+     }
+
 ```
 
 Output from the lines above:
 
 ```C++
-     9.6097
+     Power Method Result for 5x5 Hilbert Matrix: 3.75002
 ```
 
 **Implementation/Code:** The code is as follows:
