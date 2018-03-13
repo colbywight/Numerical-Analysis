@@ -1,4 +1,4 @@
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
+# Software Manual Entry
 
 **Routine Name:**  powerMethod
 
