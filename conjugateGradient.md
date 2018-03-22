@@ -1,5 +1,5 @@
 
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
+# Software Manual Entry
 
 **Routine Name:**  cGIter
 
@@ -84,4 +84,4 @@ Output from the lines above:
 }
 
 ```
-**Last Modified:** November/2017
+**Last Modified:** Marhc/2018
