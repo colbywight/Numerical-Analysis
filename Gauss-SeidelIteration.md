@@ -1,5 +1,5 @@
 
-# Math 4610 Fundamentals of Computational Mathematics Software Manual Entry
+# Software Manual Entry
 
 **Routine Name:**  gausIter
 
@@ -7,9 +7,9 @@
 
 **Language:** C++
 
-**Description/Purpose:**  The purpose of this routine, similar to Jacobi iteration, is to the appoximate solution the the linear equation Ax = b. This is one of the first simple iterative methods we will implement. In oreder for assured convergence to a solution we can use a symetric positive definite matrix. This routine is useful in that it is easy to code.
+**Description/Purpose:**  The purpose of this routine, similar to Jacobi iteration, is to the appoximate solution the the linear equation Ax = b. This is one of the first simple iterative methods we will implement. In order for assured convergence to a solution, we can use a symetric positive definite matrix. This routine is useful in that it is easy to code.
 
-**Input:** The required inputs for this routine are A, b, x0, tol and maxIter. Where we have A as a nxn (square) matrix. We will mainly use this code on not only square but large symetric positive definite matricies as this routine works well for thindin the soultion to these types of problems. b and x0 are vectors of lenght n as well. b is the solution vector and x0 will be our initial guess for our x vector. As usuall we will use tol and maxIter to break out of a loop when either out desired tolerance level is met or the maximum allowable interations has been tried.
+**Input:** The required inputs for this routine are A, b, x0, tol, and maxIter. Where we have A as a nxn (square) matrix. We will mainly use this code on not only square but large symetric positive definite matricies as this routine works well for thindin the soultion to these types of problems. b and x0 are vectors of lenght n as well. b is the solution vector and x0 will be our initial guess for our x vector. As usuall we will use tol and maxIter to break out of a loop when either out desired tolerance level is met or the maximum allowable interations has been tried.
 
 **Output:** This routine will return the final vector apporximation of x after it end the while loop. We also have modified this code to tell us the number of iterations that were required to come to our approximation.
 
@@ -76,4 +76,4 @@ Output from the lines above:
     return x0;
 }
 ```
-**Last Modified:** November/2017
+**Last Modified:** March/2018
